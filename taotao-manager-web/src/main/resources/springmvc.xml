@@ -31,7 +31,9 @@
 		address="192.168.61.102:2181" />
 	<dubbo:reference interface="com.taotao.service.ItemService"
 		id="itemService" />
-
+		<!-- 静态页面访问   mapping路劲   location 在该项目中的位置-->
+	<mvc:resources mapping="/js/**" location="/WEB-INF/js/"></mvc:resources>
+	<mvc:resources mapping="/css/**" location="/WEB-INF/css/"></mvc:resources>
 
 
 </beans>

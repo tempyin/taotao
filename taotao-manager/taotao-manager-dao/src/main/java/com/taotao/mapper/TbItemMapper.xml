@@ -4,4 +4,8 @@
 <select id="findTbItemById" parameterType="int" resultType="com.taotao.pojo.TbItem">
 		SELECT * FROM tbitem WHERE id = #{id}
 	</select>
+	<select id="findItems" resultType="com.taotao.pojo.TbItem">
+
+		SELECT * FROM tbitem
+	</select>
 </mapper>

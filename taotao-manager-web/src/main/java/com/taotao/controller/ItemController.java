@@ -1,5 +1,6 @@
 package com.taotao.controller;
 
+import com.taotao.result.EasyUIResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,5 +20,12 @@ public class ItemController {
 	public TbItem getItemById(@PathVariable Integer itemId){
 		TbItem tbItem = itemService.findTbItemById(itemId);
 		return tbItem;
+	}
+	@RequestMapping("/item/list")
+	@ResponseBody
+	public EasyUIResult getItemList(Integer page,Integer rows ){
+		EasyUIResult result = itemService.getItemList(page,rows);
+		return result;
+
 	}
 }
