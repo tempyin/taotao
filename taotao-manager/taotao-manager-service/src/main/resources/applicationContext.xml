@@ -91,6 +91,12 @@
 	<dubbo:service interface="com.taotao.service.ItemService"
 				   ref="itemServiceImpl" />
 
-
+	<dubbo:protocol name="dubbo" port="20880" />
+	<!-- 声明需要暴露的服务接口	dubbo是以接口来通信的
+		interface:代表的是 接口全类名
+		ref:是实现类的id
+	 -->
+	<dubbo:service interface="com.taotao.service.ItemCatService"
+				   ref="itemCatServiceImpl" />
 
 </beans>
