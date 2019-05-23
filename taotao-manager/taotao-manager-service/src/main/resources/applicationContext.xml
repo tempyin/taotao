@@ -20,7 +20,7 @@
 	http://www.springframework.org/schema/util/spring-util-4.2.xsd">
 
 	<!-- 加载配置文件 -->
-	<context:property-placeholder location="classpath:db.properties" />
+	<context:property-placeholder location="classpath:*.properties" />
 	<!-- 数据库连接池 -->
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
 		  destroy-method="close">
@@ -78,8 +78,10 @@
 
 	 -->
 	<dubbo:application name="taotao-manager" />
+	<!-- <dubbo:registry protocol="zookeeper"
+					address="192.168.61.102:2181" />-->
 	<dubbo:registry protocol="zookeeper"
-					address="192.168.61.102:2181" />
+					address="47.101.212.18:2181" />
 	<!-- 用dubbo协议在20880端口暴露服务
 
 	 -->
@@ -99,4 +101,6 @@
 	<dubbo:service interface="com.taotao.service.ItemCatService"
 				   ref="itemCatServiceImpl" />
 
+	<dubbo:service interface="com.taotao.service.PictureService"
+				   ref="pictureServiceImpl" />
 </beans>
