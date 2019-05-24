@@ -2,6 +2,7 @@ package com.taotao.service;
 
 import com.taotao.pojo.TbItem;
 import com.taotao.result.EasyUIResult;
+import com.taotao.result.TaotaoResult;
 
 public interface ItemService {
 	/**
@@ -18,4 +19,12 @@ public interface ItemService {
 	 * @return EasyUIResult 中有在total 总记录条数 rows每一页显示的商品集合
 	 */
 	EasyUIResult getItemList( Integer page,Integer rows);
+
+	/**
+	 * 添加商品信息
+	 * @param tbItem 商品信息
+	 * @param desc 商品描述信息
+	 * @return  返回TaotaoResult  有四个属性 jeckson
+	 */
+	TaotaoResult addItem(TbItem tbItem,String desc);
 }

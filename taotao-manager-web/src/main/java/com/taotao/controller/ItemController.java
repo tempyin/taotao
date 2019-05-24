@@ -1,6 +1,7 @@
 package com.taotao.controller;
 
 import com.taotao.result.EasyUIResult;
+import com.taotao.result.TaotaoResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,5 +28,11 @@ public class ItemController {
 		EasyUIResult result = itemService.getItemList(page,rows);
 		return result;
 
+	}
+	@RequestMapping("/item/save")
+	@ResponseBody
+	public TaotaoResult addItem(TbItem tbItem,String desc){
+		TaotaoResult result = itemService.addItem(tbItem, desc);
+		return result;
 	}
 }

@@ -13,5 +13,10 @@ public interface TbItemMapper {
 	 * @return 返回所有商品信息的集合
 	 */
 	List<TbItem> findItems();
-	
+
+	/**
+	 * 将TbItem 对象添加到数据库中
+	 * @param tbItem TbItem 对象
+	 */
+    void insert(TbItem tbItem);
 }
