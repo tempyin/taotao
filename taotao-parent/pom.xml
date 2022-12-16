@@ -20,7 +20,7 @@
         <!-- junit 测试用的 -->
         <junit.version>4.12</junit.version>
         <!-- spring  -->
-        <spring.version>4.2.4.RELEASE</spring.version>
+        <spring.version>5.2.20.RELEASE</spring.version>
         <!-- mybatis -->
         <mybatis.version>3.2.8</mybatis.version>
         <!-- spring mybatis的 整合 -->
